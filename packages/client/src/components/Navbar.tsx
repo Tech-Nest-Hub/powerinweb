@@ -1,6 +1,5 @@
 import { ModeToggle } from '@/theme/mode-toggle'
 import { ThemeProvider } from '@/theme/theme-provider'
-import React from 'react'
 import { Button } from './ui/button'
 
 const Navbar = () => {
