@@ -1,14 +1,13 @@
-import { ThemeProvider } from './theme/theme-provider'
-import { ModeToggle } from './theme/mode-toggle'
+import Navbar from "./components/Navbar";
+
 
 const App = () => {
   return (
-    <div>
-       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <ModeToggle />
-    </ThemeProvider>
-    </div>
-  )
+    <>
+  
+      <Navbar />
+    </>
+  );
 }
 
-export default App
+export default App;
