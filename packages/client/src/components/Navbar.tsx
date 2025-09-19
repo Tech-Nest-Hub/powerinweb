@@ -11,14 +11,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 const Navbar = () => {
   return (
 
-    <nav className="flex flex-row justify-between items-center px-2 py-1 shadow-sm " id="navbar">
-     <div className="flex items-center gap-4 ml-4">
+    <nav className="sticky z-1000 flex flex-row justify-between items-center px-2 py-1 shadow-sm " id="navbar">
+      <Link to="/" className='flex items-center gap-4 ml-4'>
       <Avatar>
         <AvatarImage src={logo_of_Powerinweb} alt='Logo of Powerinweb' />
         <AvatarFallback>PW</AvatarFallback>
       </Avatar>
       <h1 className='text-2xl font-bold'>Powerinweb</h1>
-     </div>
+      </Link>
 
       <div className="flex gap-4 py-3 mr-4">
         <Button
