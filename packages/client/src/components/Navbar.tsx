@@ -17,10 +17,27 @@ const Navbar = () => {
           asChild>
           <Link to="/websites">Websites</Link>
         </Button>
-        <Button variant="link" className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400">Projects</Button>
-        <Button variant="link" className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400">Blog</Button>
-        <Button variant="link" className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400">About</Button>
-        <Button className="text-base cursor-pointer dark:hover:text-gray-400 hover">Join Discord</Button>
+        <Button 
+          variant="link" 
+          className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400"
+          asChild>
+            <Link to="/projects">Projects</Link>
+        </Button>
+        <Button 
+          variant="link"
+          className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400"
+          asChild>
+          <Link to="/blogs">Blog</Link>
+        </Button>
+        <Button 
+          variant="link"
+          className="text-base hover:text-gray-600 transition-all duration-200 ease-in-out cursor-pointer dark:hover:text-gray-400"
+          asChild>
+          <Link to="/about">About</Link>
+        </Button>
+        <Button className="text-base cursor-pointer dark:hover:text-gray-400 hover" asChild>
+          <Link to="/discord">Join Discord</Link>
+        </Button>
       </div>
 
 
