@@ -9,14 +9,14 @@ import Blogs from "@/pages/blog";
 const RoutesConfig = () => {
     return (
         <>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/blogs" element={<Blogs />} />
-                    <Route path="/websites" element={<Websites />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/about" element={<About />} />
-                </Routes>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/blogs" element={<Blogs />} />
+                <Route path="/websites" element={<Websites />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
         </>
     );
 }
