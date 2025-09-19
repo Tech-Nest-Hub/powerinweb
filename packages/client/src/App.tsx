@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
 import { BrowserRouter as  Router, Routes, Route } from "react-router-dom";
-import Websites from "@/pages/websites";
-import Projects from "@/pages/projects";
-import About from "@/pages/about";
-import Home from "@/pages/home";
-import Blogs from "@/pages/blog";
+import Websites from "@/pages/website/websites.tsx";
+import Projects from "@/pages/project/projects.tsx";
+import About from "@/pages/about/about.tsx";
+import Home from "@/pages/home/home.tsx";
+import Blogs from "@/pages/blog/blog.tsx";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/about" element={<About />} />
             </Routes>
+            <Footer />
     </Router>
   );
 }
