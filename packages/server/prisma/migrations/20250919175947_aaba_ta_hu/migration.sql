@@ -1,10 +1,12 @@
 -- CreateTable
 CREATE TABLE "public"."Website" (
-    "id" TEXT NOT NULL,
+    "id" UUID NOT NULL,
     "name" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "description" TEXT,
     "value" INTEGER,
+    "imageUrl" TEXT,
+    "categoryId" UUID,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Website_pkey" PRIMARY KEY ("id")
@@ -12,11 +14,13 @@ CREATE TABLE "public"."Website" (
 
 -- CreateTable
 CREATE TABLE "public"."Project" (
-    "id" TEXT NOT NULL,
+    "id" UUID NOT NULL,
     "name" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "description" TEXT,
     "value" INTEGER,
+    "imageUrl" TEXT,
+    "categoryId" UUID,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Project_pkey" PRIMARY KEY ("id")
@@ -24,24 +28,32 @@ CREATE TABLE "public"."Project" (
 
 -- CreateTable
 CREATE TABLE "public"."Tag" (
-    "id" TEXT NOT NULL,
+    "id" UUID NOT NULL,
     "name" TEXT NOT NULL,
 
     CONSTRAINT "Tag_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
+CREATE TABLE "public"."Category" (
+    "id" UUID NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "Category_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
 CREATE TABLE "public"."_ProjectTags" (
-    "A" TEXT NOT NULL,
-    "B" TEXT NOT NULL,
+    "A" UUID NOT NULL,
+    "B" UUID NOT NULL,
 
     CONSTRAINT "_ProjectTags_AB_pkey" PRIMARY KEY ("A","B")
 );
 
 -- CreateTable
 CREATE TABLE "public"."_WebsiteTags" (
-    "A" TEXT NOT NULL,
-    "B" TEXT NOT NULL,
+    "A" UUID NOT NULL,
+    "B" UUID NOT NULL,
 
     CONSTRAINT "_WebsiteTags_AB_pkey" PRIMARY KEY ("A","B")
 );
@@ -56,10 +68,19 @@ CREATE UNIQUE INDEX "Project_url_key" ON "public"."Project"("url");
 CREATE UNIQUE INDEX "Tag_name_key" ON "public"."Tag"("name");
 
 -- CreateIndex
+CREATE UNIQUE INDEX "Category_name_key" ON "public"."Category"("name");
+
+-- CreateIndex
 CREATE INDEX "_ProjectTags_B_index" ON "public"."_ProjectTags"("B");
 
 -- CreateIndex
 CREATE INDEX "_WebsiteTags_B_index" ON "public"."_WebsiteTags"("B");
+
+-- AddForeignKey
+ALTER TABLE "public"."Website" ADD CONSTRAINT "Website_categoryId_fkey" FOREIGN KEY ("categoryId") REFERENCES "public"."Category"("id") ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "public"."Project" ADD CONSTRAINT "Project_categoryId_fkey" FOREIGN KEY ("categoryId") REFERENCES "public"."Category"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "public"."_ProjectTags" ADD CONSTRAINT "_ProjectTags_A_fkey" FOREIGN KEY ("A") REFERENCES "public"."Project"("id") ON DELETE CASCADE ON UPDATE CASCADE;
