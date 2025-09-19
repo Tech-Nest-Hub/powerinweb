@@ -1,0 +1,50 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Website {
+  id          String    @id @default(uuid())
+  name        String
+  url         String    @unique
+  description String?
+  value       Int?
+  imageUrl    String?   // NEW field
+  tags        Tag[]     @relation("WebsiteTags")
+  categoryId  String?   // FK to Category
+  category    Category? @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime  @default(now())
+}
+
+model Project {
+  id          String    @id @default(uuid())
+  name        String
+  url         String    @unique
+  description String?
+  value       Int?
+  imageUrl    String?   // NEW field
+  tags        Tag[]     @relation("ProjectTags")
+  categoryId  String?
+  category    Category? @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime  @default(now())
+}
+
+model Tag {
+  id       String     @id @default(uuid())
+  name     String     @unique
+  websites Website[]  @relation("WebsiteTags")
+  projects Project[]  @relation("ProjectTags")
+}
+
+model Category {
+  id       String     @id @default(uuid())
+  name     String     @unique
+  websites Website[]
+  projects Project[]
+}
