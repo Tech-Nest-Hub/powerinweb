@@ -5,8 +5,8 @@ import { Search } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="h-full my-32 flex flex-col justify-center items-center gap-6">
-      <h1 className="text-6xl font-bold px-96"> 
+    <div className="h-full my-28 flex flex-col justify-center items-center gap-6">
+      <h1 className="text-7xl font-bold px-96"> 
       <Shuffle
         text="Surf the Web's Hidden Gems"
         shuffleDirection="right"
@@ -23,7 +23,7 @@ const Home = () => {
         </h1>
       <p className="text-xl flex text-center items-center justify-center px-80"> A curated list of fascinating websites & projects to explore and build with. Discover without without the overwhelm .</p>
 
-      <div className="flex items-center  border-2 border-gray-800 rounded-lg  w-96">
+      <div className="flex items-center  border-2 border-gray-800 rounded-lg  w-[500px]">
         <Search className=" ml-4 w-4 h-4" />
         <HomeInput
           type="text"
@@ -31,7 +31,7 @@ const Home = () => {
           className="h-14 text-lg px-4 w-full border-none"
         >
         </HomeInput>
-        
+
       </div>
 
     </div>
