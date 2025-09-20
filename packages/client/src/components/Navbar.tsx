@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
 
     <nav className="sticky z-1000 flex flex-row justify-between items-center px-2 py-1 shadow-sm " id="navbar">
-      <Link to="/" className='flex items-center gap-4 ml-4'>
+      <Link to="/" className='cursor-target flex items-center gap-4 ml-4'>
       <Avatar>
         <AvatarImage src={logo_of_Powerinweb} alt='Logo of Powerinweb' />
         <AvatarFallback>PW</AvatarFallback>
