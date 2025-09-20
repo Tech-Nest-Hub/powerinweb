@@ -19,6 +19,8 @@ const Home = () => {
         triggerOnce={true}
         triggerOnHover={true}
         respectReducedMotion={true}
+        loop={true}
+        loopDelay={2}
         />
         </h1>
       <p className="text-xl flex text-center items-center justify-center px-80"> A curated list of fascinating websites & projects to explore and build with. Discover without without the overwhelm .</p>
