@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, type JSX } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText as GSAPSplitText } from 'gsap/SplitText';
@@ -231,7 +231,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
           repeatDelay: loop ? loopDelay : 0,
           onRepeat: () => {
             if (scrambleCharset) randomizeScrambles();
-            gsap.set(strips, { x: (i, t: HTMLElement) => parseFloat(t.getAttribute('data-start-x') || '0') });
+            gsap.set(strips, { x: (_i, t: HTMLElement) => parseFloat(t.getAttribute('data-start-x') || '0') });
             onShuffleComplete?.();
           },
           onComplete: () => {
@@ -249,7 +249,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
           tl.to(
             targets,
             {
-              x: (i, t: HTMLElement) => parseFloat(t.getAttribute('data-final-x') || '0'),
+              x: (_i, t: HTMLElement) => parseFloat(t.getAttribute('data-final-x') || '0'),
               duration,
               ease,
               force3D: true,
