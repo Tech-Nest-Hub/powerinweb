@@ -1,7 +1,6 @@
 import AnimatedSearchInput from "@/components/manual-ui/animated-search";
 import { BrowseButton } from "@/components/manual-ui/broswe-button";
 import Shuffle from "@/components/manual-ui/suffle";
-import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 
 

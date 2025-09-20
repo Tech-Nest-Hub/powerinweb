@@ -123,16 +123,13 @@
 
 
 /* Browse Button */
-:root {
-  --royal-blue: #000000;
-}
+
 
 .border-royal-blue {
-  border-color: var(--royal-blue);
+  border-color: blac;
 }
-
-.text-royal-blue {
-  color: var(--royal-blue);
+.dark .border-royal-blue {
+  border-color: white;
 }
 
 button.group span::before {
@@ -147,15 +144,32 @@ button.group span::before {
   transform: translate(-50%, -50%) rotate(-60deg);
   transition: all 0.3s;
 }
+/* Dark theme */
+.dark button.group span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: rgb(51, 51, 51); /* dark gray */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
 
 button.group:hover span::before {
   transform: translate(-50%, -50%) rotate(-90deg);
   width: 100%;
-  background: var(--royal-blue);
+  background: black;
   color: white;
 }
-
-button.group:active span::before {
-  background: #2751cd;
+.dark button.group:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: white;
+  color: black;
 }
+
+
 /* Browse Button End */

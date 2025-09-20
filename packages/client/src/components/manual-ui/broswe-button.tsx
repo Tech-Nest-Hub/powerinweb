@@ -8,8 +8,8 @@ const browseButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: "text-royal-blue hover:text-white",
-        royal: "text-royal-blue hover:text-white",
+        default: " hover:text-white dark:hover:text-black",
+        royal: "hover:text-white dark:hover:text-black",
       },
       size: {
         default: "h-10 px-4 py-2",
