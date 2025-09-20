@@ -19,8 +19,8 @@ const AnimatedSearchInput = () => {
           if (inputRef.current) {
             inputRef.current.focus();
           }
-        }, 300);
-      }, 500); // Delay before animation starts
+        }, 500);
+      }, 1000); // Delay before animation starts
       
       return () => clearTimeout(timer);
     }
