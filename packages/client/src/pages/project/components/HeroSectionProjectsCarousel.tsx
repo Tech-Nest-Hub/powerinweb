@@ -11,7 +11,7 @@ import {
 } from "../../../components/ui/carousel"
 
 
-const HeroSectionWebsiteCarousel = () => {
+const HeroSectionProjectsCarousel = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
@@ -42,4 +42,4 @@ const HeroSectionWebsiteCarousel = () => {
   )
 }
 
-export default HeroSectionWebsiteCarousel
+export default HeroSectionProjectsCarousel

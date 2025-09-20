@@ -1,9 +1,9 @@
-import HeroSectionWebsiteCarousel from "../components/HeroSectionWebsiteCarousel"
+import HeroSectionProjectsCarousel from "../components/HeroSectionProjectsCarousel";
 
 const Projects = () => {
   return (
     <>
-      <HeroSectionWebsiteCarousel />
+     <HeroSectionProjectsCarousel/>
     </>
   );
 };
