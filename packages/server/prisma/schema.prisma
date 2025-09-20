@@ -4,46 +4,48 @@ generator client {
   output   = "../generated/prisma"
 }
 
+
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url      = env("DATABASE_URL") // runtime pooler
+  directUrl = env("DIRECT_URL")  // used only for migrations
 }
 
 model Website {
-  id          String    @id @default(uuid())
+  id          String    @id @default(uuid()) @db.Uuid
   name        String
   url         String    @unique
   description String?
   value       Int?
   imageUrl    String?   // NEW field
   tags        Tag[]     @relation("WebsiteTags")
-  categoryId  String?   // FK to Category
+  categoryId  String?   @db.Uuid // FK to Category
   category    Category? @relation(fields: [categoryId], references: [id])
   createdAt   DateTime  @default(now())
 }
 
 model Project {
-  id          String    @id @default(uuid())
+  id          String    @id @default(uuid()) @db.Uuid
   name        String
   url         String    @unique
   description String?
   value       Int?
   imageUrl    String?   // NEW field
   tags        Tag[]     @relation("ProjectTags")
-  categoryId  String?
+  categoryId  String?   @db.Uuid
   category    Category? @relation(fields: [categoryId], references: [id])
   createdAt   DateTime  @default(now())
 }
 
 model Tag {
-  id       String     @id @default(uuid())
+  id       String     @id @default(uuid()) @db.Uuid
   name     String     @unique
   websites Website[]  @relation("WebsiteTags")
   projects Project[]  @relation("ProjectTags")
 }
 
 model Category {
-  id       String     @id @default(uuid())
+  id       String     @id @default(uuid()) @db.Uuid
   name     String     @unique
   websites Website[]
   projects Project[]
