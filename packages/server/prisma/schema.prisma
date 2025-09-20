@@ -7,7 +7,8 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  url       = env("DIRECT_URL")
+  url      = env("DATABASE_URL") // runtime pooler
+  directUrl = env("DIRECT_URL")  // used only for migrations
 }
 
 model Website {
