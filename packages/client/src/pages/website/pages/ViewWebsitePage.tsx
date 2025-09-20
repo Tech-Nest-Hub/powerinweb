@@ -4,7 +4,6 @@ const Websites = () => {
   return (
     <>
       <HeroSectionCarousel />
-      <p>This is the websites page.</p>
     </>
   );
 };
