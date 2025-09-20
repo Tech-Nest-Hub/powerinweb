@@ -41,7 +41,7 @@ const AnimatedSearchInput = () => {
 
   return (
     <div 
-      className={`flex items-center border-2 border-gray-800 dark:border-gray-200 rounded-lg bg-white dark:bg-gray-800 transition-all duration-500 ease-out overflow-hidden ${
+      className={`flex cursor-target items-center border-2 border-gray-800 dark:border-gray-200 rounded-lg bg-white dark:bg-gray-800 transition-all duration-500 ease-out overflow-hidden ${
         isExpanded ? 'w-[500px]' : 'w-14'
       }`}
     >
