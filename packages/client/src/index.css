@@ -119,3 +119,43 @@
   }
 }
 
+
+
+
+/* Browse Button */
+:root {
+  --royal-blue: #000000;
+}
+
+.border-royal-blue {
+  border-color: var(--royal-blue);
+}
+
+.text-royal-blue {
+  color: var(--royal-blue);
+}
+
+button.group span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: #e5e7eb; /* lightgray */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.3s;
+}
+
+button.group:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: var(--royal-blue);
+  color: white;
+}
+
+button.group:active span::before {
+  background: #2751cd;
+}
+/* Browse Button End */
