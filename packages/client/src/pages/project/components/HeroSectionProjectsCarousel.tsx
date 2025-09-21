@@ -9,12 +9,25 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../../components/ui/carousel"
-
+import {getProjects} from "../../../../api/projects";
 
 const HeroSectionProjectsCarousel = () => {
+  const [Projects, setProjects] = React.useState([]);
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
+  const fetchProjects = async () => {
+    try {
+      const response = await getProjects();
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error("Error fetching websites:", error);
+    }
+  }
+  React.useEffect(()=>{
+    fetchProjects();
+  },[])
   return (
     <Carousel
       plugins={[plugin.current]}
