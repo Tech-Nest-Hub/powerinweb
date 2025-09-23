@@ -14,6 +14,7 @@ import { type WebsiteType } from "../types/website_types"
 
 const HeroSectionWebsiteCarousel = () => {
   const [websites, setWebsites] = useState<WebsiteType[]>([]);
+  const [isloading, setIsloading] = useState(false);
   
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -21,10 +22,13 @@ const HeroSectionWebsiteCarousel = () => {
   
   const fetchWebsites = async () => {
     try {
+      setIsloading(true);
       const response = await getWebsites();
       setWebsites(response);
     } catch (error) {
       console.error("Error fetching websites:", error);
+    } finally {
+      setIsloading(false);
     }
   }
   
