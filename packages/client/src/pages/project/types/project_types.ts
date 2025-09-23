@@ -1,12 +1,7 @@
-export interface TagType {
-  id: string;
-  name: string;
-}
+import {type CategoryType} from "@/api/categories"
+import type { TagType } from "@/api/tags";
 
-export interface CategoryType {
-  id: string;
-  name: string;
-}
+
 
 export interface ProjectType {
   id: string;
