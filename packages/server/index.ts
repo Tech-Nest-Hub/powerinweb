@@ -15,9 +15,14 @@ const PORT = Number(process.env.PORT) || 3000;
 
 app.use(
   cors({
-    origin: "https://powerinweb.netlify.app",
+    origin: [
+      "http://localhost:5173",
+      "https://powerinweb.netlify.app",
+    ],
+    credentials: true, // if using cookies/sessions
   })
 );
+
 
 
 // Needed since you’re using ESM (ts with module: "esnext")
@@ -40,5 +45,5 @@ app.get('/', (req : Request, res: Response) => {
 
 
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`🚀 Server running at http://0.0.0.0:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });

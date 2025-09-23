@@ -1,5 +1,4 @@
 
-import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
 import { Card, CardContent } from "../../../components/ui/card"
 import {
@@ -9,12 +8,30 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../../components/ui/carousel"
+// import { useState } from "react"
+import * as React from "react"
+// import getWebsites from "../../../../api/websites";
 
 
 const HeroSectionWebsiteCarousel = () => {
+  // const [Websites, setWebsites] = useState([]);
+  
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
+  // const fetchWebsites = async () => {
+  //   try {
+  //     const response = await getWebsites();
+  //     const data = await response.json();
+  //     setWebsites(data);
+  //   } catch (error) {
+  //     console.error("Error fetching websites:", error);
+  //   }
+  // }
+  // React.useEffect(()=>{
+  //   fetchWebsites();
+  // },[])
+
   return (
     <Carousel
       plugins={[plugin.current]}
