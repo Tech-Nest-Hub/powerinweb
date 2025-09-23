@@ -13,7 +13,7 @@ const About = () => {
       
       <div className="flex flex-wrap justify-around my-10">
         <div className="w-[450px]">
-          <h1 className="text-4xl my-5 text-bold">Technest</h1>
+          <h1 className="text-4xl mb-5 text-bold">Technest</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cupiditate nisi cum nesciunt ratione excepturi quisquam at commodi fuga quod quia, labore in id ut dignissimos nam sint impedit. Rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sequi obcaecati id odit exercitationem sapiente vel repudiandae dicta, voluptas sint dolor enim! Alias omnis eaque molestiae accusamus delectus, asperiores quod?</p>
         </div>
 
@@ -45,7 +45,7 @@ const About = () => {
 
       <div className="flex flex-wrap justify-around my-10">
         <div className="w-[450px]">
-          <h1 className="text-4xl my-5 text-bold">Aakash Subedi</h1>
+          <h1 className="text-4xl mb-5 text-bold">Aakash Subedi</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cupiditate nisi cum nesciunt ratione excepturi quisquam at commodi fuga quod quia, labore in id ut dignissimos nam sint impedit. Rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sequi obcaecati id odit exercitationem sapiente vel repudiandae dicta, voluptas sint dolor enim! Alias omnis eaque molestiae accusamus delectus, asperiores quod?</p>
         </div>
 
@@ -78,7 +78,7 @@ const About = () => {
 
       <div className="flex flex-wrap justify-around my-10">
         <div className="w-[450px]">
-          <h1 className="text-4xl my-5 text-bold">Pratyush Tamrakar</h1>
+          <h1 className="text-4xl mb-5 text-bold">Pratyush Tamrakar</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cupiditate nisi cum nesciunt ratione excepturi quisquam at commodi fuga quod quia, labore in id ut dignissimos nam sint impedit. Rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sequi obcaecati id odit exercitationem sapiente vel repudiandae dicta, voluptas sint dolor enim! Alias omnis eaque molestiae accusamus delectus, asperiores quod?</p>
         </div>
 
