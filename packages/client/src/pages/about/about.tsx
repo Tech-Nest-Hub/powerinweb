@@ -1,6 +1,4 @@
-import { Instagram } from 'lucide-react'
-import { Linkedin } from 'lucide-react';
-import { Github } from 'lucide-react';
+import { Instagram , Linkedin , Github } from 'lucide-react'
 import { Link } from 'react-router-dom';
 
 
