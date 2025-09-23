@@ -51,6 +51,7 @@ const About = () => {
 
         <div className="w-[250px] h-[300px] ">
           <img src="" alt="tech-nest: the future of tech "/>
+          Your mom
         </div>
 
         <div>
