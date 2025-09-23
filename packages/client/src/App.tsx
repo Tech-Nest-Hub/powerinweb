@@ -7,6 +7,7 @@ import Home from "@/pages/home/home.tsx";
 import Blogs from "@/pages/blog/blog.tsx";
 import Footer from "./components/Footer";
 import TargetCursor from "./components/manual-ui/magic-cursor";
+import Loader from "./utils/loader";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/websites" element={<Websites />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
+        <Route path="/loader" element={<Loader />} />
       </Routes>
       <Footer />
 
