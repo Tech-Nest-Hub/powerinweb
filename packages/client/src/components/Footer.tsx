@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
+import img from "@/assets/powerinweb_logo.jpeg"
 
 
 const Footer = () => {
@@ -7,7 +8,10 @@ const Footer = () => {
         <footer className="shadow-md mt-10 ">
             <div className="flex justify-between px-10 py-6"> 
                 <div>
-                    <Link to="/" className="text-lg">Logo-Power in Web</Link>
+                    <h1>
+                        <img src={img} alt="powerinweb" className="h-20 rounded-full" />
+                        <Link to="/" className="text-lg">Logo-Power in Web</Link>
+                    </h1>
                     <p className="text-sm">Surf the Web's Hidden Gems</p>
                 </div>
                 <div className="flex flex-col">
