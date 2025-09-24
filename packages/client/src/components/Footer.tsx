@@ -8,11 +8,13 @@ const Footer = () => {
         <footer className="shadow-md mt-10 ">
             <div className="flex justify-between px-10 py-6"> 
                 <div>
-                    <h1>
+                    <h1 className="flex flex-row items-center">
                         <img src={img} alt="powerinweb" className="h-20 rounded-full" />
-                        <Link to="/" className="text-lg">Logo-Power in Web</Link>
+                        <div>
+                            <Link to="/" className="text-lg font-medium">Power in Web</Link>
+                            <p className="text-sm">Surf the Web's Hidden Gems</p>
+                        </div>
                     </h1>
-                    <p className="text-sm">Surf the Web's Hidden Gems</p>
                 </div>
                 <div className="flex flex-col">
                     <Button variant="link"><Link to="/About">About</Link></Button>
