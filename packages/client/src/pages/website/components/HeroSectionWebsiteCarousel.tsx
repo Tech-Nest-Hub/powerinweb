@@ -11,6 +11,7 @@ import { useState } from "react"
 import * as React from "react"
 import getWebsites from "@/api/websites"
 import { type WebsiteType } from "../types/website_types"
+import Loader from "@/utils/loader"
 
 const HeroSectionWebsiteCarousel = () => {
   const [websites, setWebsites] = useState<WebsiteType[]>([]);
@@ -35,6 +36,11 @@ const HeroSectionWebsiteCarousel = () => {
   React.useEffect(() => {
     fetchWebsites();
   }, [])
+  {
+    if (isloading) {
+      return <Loader/>
+    }
+  }
 
   return (
     <>
