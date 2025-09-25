@@ -9,7 +9,17 @@ export interface WebsiteType {
   value: number;
   imageUrl?: string | null;
   categoryId?: string | null;
-  createdAt: string; // or Date if you parse it
+  createdAt: string; // ISO string (parse as Date if needed)
   tags: TagType[];
   category?: CategoryType | null;
 }
+
+export interface WebsiteResponse {
+  data: WebsiteType[];
+  meta: {
+    total: number;
+    page: number;
+    limit: number;
+    totalPages: number;
+  };
+};

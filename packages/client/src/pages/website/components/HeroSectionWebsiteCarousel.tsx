@@ -20,12 +20,12 @@ const HeroSectionWebsiteCarousel = () => {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
-  
+
   const fetchWebsites = async () => {
     try {
       setIsloading(true);
-      const response = await getWebsites();
-      setWebsites(response);
+      const response = await getWebsites({ page: 1, limit: 10 }) 
+      setWebsites(response.data);
     } catch (error) {
       console.error("Error fetching websites:", error);
     } finally {
@@ -51,7 +51,7 @@ const HeroSectionWebsiteCarousel = () => {
         onMouseLeave={plugin.current.reset}
       >
         <CarouselContent className="">
-          {websites.slice(0, 10).map((website) => (
+          {websites.map((website) => (
             <CarouselItem key={website.id} className="basis-full rounded-none">
               <Card className="rounded-none py-6 m-0">
                 <CardContent className="flex w-full h-[400px] items-center justify-center p-6">
