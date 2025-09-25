@@ -24,7 +24,7 @@ const HeroSectionWebsiteCarousel = () => {
   const fetchWebsites = async () => {
     try {
       setIsloading(true);
-      const response = await getWebsites({ page: 1, limit: 10 }) 
+      const response = await getWebsites({ page: 1, limit: 10 }); 
       setWebsites(response.data);
     } catch (error) {
       console.error("Error fetching websites:", error);
@@ -63,7 +63,7 @@ const HeroSectionWebsiteCarousel = () => {
                         className="mx-auto mb-4 max-h-32 object-cover rounded-lg"
                       />
                     )}
-                    <h3 className="text-2xl font-semibold mb-2">{website.name}</h3>
+                    <h3 className="text-5xl font-semibold mb-2">{website.name}</h3>
                     <p className="text-lg text-gray-600 mb-2">{website.description}</p>
                     <p className="text-sm text-gray-500">Value: ${website.value}</p>
                     <a 
