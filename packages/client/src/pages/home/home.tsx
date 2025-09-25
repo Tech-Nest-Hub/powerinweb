@@ -2,6 +2,7 @@ import AnimatedSearchInput from "@/components/manual-ui/animated-search";
 import { BrowseButton } from "@/components/manual-ui/broswe-button";
 import Shuffle from "@/components/manual-ui/suffle";
 import { ChevronRight } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -30,11 +31,11 @@ const Home = () => {
       <AnimatedSearchInput />
       <div className="flex flex-row gap-8">
         <BrowseButton className="text-md p-2 cursor-pointer hover:text-white" variant={"royal"}>
-          Browse websites
+         <Link to="/websites"> Browse websites</Link>
           <ChevronRight className="ml-2 w-4 h-4" />
         </BrowseButton>
         <BrowseButton className="text-md p-2 cursor-pointer hover:text-white">
-          Browse projects
+          <Link to="/projects"> Browse projects</Link>
           <ChevronRight className="ml-2 w-4 h-4 " />
         </BrowseButton>
       </div>
