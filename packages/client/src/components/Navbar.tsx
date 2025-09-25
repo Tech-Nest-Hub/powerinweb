@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="sticky z-1000 flex flex-row justify-between items-center px-2 py-1 shadow-sm " id="navbar">
       <Link to="/" className='cursor-target flex items-center gap-4 ml-4'>
       <Avatar>
-        <AvatarImage src={logo_of_Powerinweb} alt='Logo of Powerinweb' />
+        <AvatarImage src={logo_of_Powerinweb} alt='Powerinweb' />
         <AvatarFallback>PW</AvatarFallback>
       </Avatar>
       <h1 className='text-2xl font-bold'>Powerinweb</h1>
