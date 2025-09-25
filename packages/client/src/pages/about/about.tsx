@@ -72,6 +72,25 @@ const About = () => {
           <Link to="https://www.instagram.com" className="m-4 p-2"><Instagram size={40} color="#e22222" /></Link>
         </div>
       </div>
+
+              {/* punjan */}
+      <div className="flex flex-wrap justify-center py-10 border-b-2 border-gray-700">
+        <div className="px-4 py-1/2">
+          <Link to="https://github.com/Ghost9841" className="m-4 p-2"><Github className='text-black dark:text-white' size={40} /></Link>
+          <Link to="https://www.linkedin.com" className="m-4 p-2"><Linkedin color="#00b3ff" size={40} /></Link>
+          <Link to="https://www.instagram.com" className="m-4 p-2"><Instagram size={40} color="#e22222" /></Link>
+        </div>
+
+
+        <img src="" alt="punjan " className="rounded-full h-[250px] mx-10 "/>
+
+        <div className="w-[400px]">
+          <h1 className="text-4xl mb-5 text-bold">Punjan Pandey</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores cupiditate nisi cum nesciunt ratione excepturi quisquam at commodi fuga quod quia, labore in id ut dignissimos nam sint impedit. Rem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sequi obcaecati id odit exercitationem sapiente vel repudiandae dicta, voluptas sint dolor enim! Alias omnis eaque molestiae accusamus delectus, asperiores quod?</p>
+        </div>
+
+      </div>
+      
     </>
   );
 }
