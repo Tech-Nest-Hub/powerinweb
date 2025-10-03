@@ -1,4 +1,4 @@
-import type { WebsiteResponse, WebsiteType } from "@/pages/website/types/website_types";
+import type { WebsiteResponse } from "@/pages/website/types/website_types";
 import api from "./client";
 
 export const getWebsites = async ({
@@ -17,17 +17,11 @@ export const getWebsites = async ({
   const res = await api.get<WebsiteResponse>("/websites", {
     params: { page, limit, search, tag, category },
   });
-
-  // ✅ Normalize data here
-  return {
-    ...res.data,
-    data: res.data.data.map((w: WebsiteType) => ({
-      ...w,
-      description: w.description || "",
-      tags: Array.isArray(w.tags) ? w.tags : [],
-      category: w.category || undefined,
-    })),
-  };
+  console.log(res.data);
+  
+  return res.data;
 };
+
+
 
 export default getWebsites;
