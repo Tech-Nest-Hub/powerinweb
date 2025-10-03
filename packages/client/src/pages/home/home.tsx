@@ -26,7 +26,6 @@ const Home = () => {
         />
       </h1>
       <p className="text-xl flex text-center items-center justify-center px-80"> A curated list of fascinating websites & projects to explore and build with. Discover without without the overwhelm .</p>
-      <div>Hello</div>
 
       <AnimatedSearchInput />
       <div className="flex flex-row gap-8">
