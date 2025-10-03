@@ -69,9 +69,9 @@ const HeroSectionWebsiteCarousel = () => {
                     </div>
                     
                     <div className="flex flex-row items-center pt-4 ">
-                      <p className="text-sm text-gray-600 dark:text-gray-400">Value: ${website.value}</p>
+                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-400">Value: ${website.value}</p>
                       {website.category && (
-                        <p className="text-sm text-gray-600 px-10  dark:text-gray-400">
+                        <p className="text-sm font-semibold text-gray-900 px-10  dark:text-gray-400">
                           Category: {website.category.name}
                         </p>
                       )}
@@ -79,9 +79,9 @@ const HeroSectionWebsiteCarousel = () => {
 
                     {website.tags && website.tags.length > 0 && (
                       <div className="my-4">
-                        <span className="text-xs text-gray-400 ">Tags: </span>
+                        <span className="text-sm text-gray-900 ">Tags: </span>
                         {website.tags.map(tag => (
-                          <span key={tag.id} className="text-xs bg-gray-100 px-2 py-1 rounded mr-1 dark:text-gray-800">
+                          <span key={tag.id} className="text-xs bg-gray-300 px-2 py-1 rounded mr-1 dark:text-gray-800">
                             {tag.name}
                           </span>
                         ))}
@@ -115,8 +115,8 @@ const HeroSectionWebsiteCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselNext className="right-4 size-12" />
-        <CarouselPrevious className="left-4 size-12" />
+        <CarouselNext className="right-4 size-12  cursor-target rounded-md" />
+        <CarouselPrevious className="left-4 size-12 cursor-target rounded-md" />
       </Carousel>
     </>
   )
