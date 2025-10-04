@@ -84,7 +84,7 @@ const HeroSectionWebsiteCarousel = () => {
     );
   }
 
-  if (websites.length === 0 && !isLoading) {
+  if (websites?.length === 0 && !isLoading) {
     return (
       <div className="w-full h-[400px] flex items-center justify-center">
         <p className="text-gray-500 dark:text-gray-400">No websites available.</p>
@@ -143,7 +143,7 @@ const HeroSectionWebsiteCarousel = () => {
                   </div>
 
                   {/* Tags Section */}
-                  {website.tags && website.tags.length > 0 && (
+                  {website.tags && website.tags?.length > 0 && (
                     <div className="mb-6">
                       <div className="flex flex-wrap gap-2">
                         {website.tags.map(tag => (
