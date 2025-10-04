@@ -8,6 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import path from "path";
 import { fileURLToPath } from "url";
+import cron from "node-cron";
 
 
 export const app = express();
@@ -43,6 +44,15 @@ app.get('/', (req : Request, res: Response) => {
     res.send('Welcome To Power In Web Backend!');
 })
 
+cron.schedule("*/10 * * * *", async () => {
+  console.log("Pinging self to stay awake...");
+  try {
+    await fetch("https://your-backend.onrender.com"); // 👈 replace with your actual backend URL
+    console.log("Ping successful ✅");
+  } catch (err) {
+    console.error("Ping failed ❌", err);
+  }
+});
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
