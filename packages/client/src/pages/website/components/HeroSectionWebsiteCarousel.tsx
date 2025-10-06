@@ -30,6 +30,8 @@ const HeroSectionWebsiteCarousel = () => {
       setIsLoading(true);
       setError(null);
       const response = await getWebsites({ page: 1, limit: 10 });
+      console.log(response.data);
+      
       setWebsites(response.data);
     } catch (error) {
       console.error("Error fetching websites:", error);
@@ -179,7 +181,7 @@ const HeroSectionWebsiteCarousel = () => {
                     </Button>
                     <Button variant="outline" asChild className="gap-2">
                       <a 
-                        href={`/websites/${website.id}`} // Use actual detail route
+                        href={`/websites/${website.url}`} // Use actual detail route
                         className="inline-flex items-center"
                       >
                         <Info className="w-4 h-4" />
