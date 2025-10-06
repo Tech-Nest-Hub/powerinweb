@@ -18,6 +18,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://powerinweb.netlify.app",
+      "https://powerinweb.onrender.com",
     ],
     credentials: true, // if using cookies/sessions
   })
