@@ -17,7 +17,6 @@ export const getWebsites = async ({
   const res = await api.get<WebsiteResponse>("/websites", {
     params: { page, limit, search, tag, category },
   });
-  
   return res.data;
 };
 

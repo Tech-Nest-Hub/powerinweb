@@ -48,7 +48,7 @@ app.get('/', (req : Request, res: Response) => {
 cron.schedule("*/10 * * * *", async () => {
   console.log("Pinging self to stay awake...");
   try {
-    await fetch("https://your-backend.onrender.com"); // 👈 replace with your actual backend URL
+    await fetch("https://powerinweb.onrender.com"); // 👈 replace with your actual backend URL
     console.log("Ping successful ✅");
   } catch (err) {
     console.error("Ping failed ❌", err);
