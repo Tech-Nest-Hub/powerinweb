@@ -44,7 +44,7 @@ const FeaturedSectionWebsite = () => {
         {websites.map((website) => (
           <CarouselItem key={website.id} className="md:basis-1/3 lg:basis-1/4">
             <div className="p-1">
-              <Card >
+              <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-4">
                   <span className="text-2xl font-semibold">   {website.imageUrl && (
                       <img 
