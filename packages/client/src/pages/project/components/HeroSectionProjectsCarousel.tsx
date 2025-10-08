@@ -9,26 +9,24 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../../components/ui/carousel"
-import {getProjects} from "../../../api/projects";
-import type { ProjectType } from "../types/project_types";
 
 const HeroSectionProjectsCarousel = () => {
-  const [Projects, setProjects] = React.useState<ProjectType[]>([]);
+  // const [Projects, setProjects] = React.useState<ProjectType[]>([]);
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
-  const fetchProjects = async () => {
-    try {
-      const response = await getProjects();
-      console.log(response);
-      setProjects(response);
-    } catch (error) {
-      console.error("Error fetching websites:", error);
-    }
-  }
-  React.useEffect(()=>{
-    fetchProjects();
-  },[])
+  // const fetchProjects = async () => {
+  //   try {
+  //     const response = await getProjects();
+  //     console.log(response);
+  //     setProjects(response);
+  //   } catch (error) {
+  //     console.error("Error fetching websites:", error);
+  //   }
+  // }
+  // React.useEffect(()=>{
+  //   fetchProjects();
+  // },[])
   return (
     <>
     <Carousel
@@ -54,14 +52,6 @@ const HeroSectionProjectsCarousel = () => {
       <CarouselNext className="right-4 size-12" />
       <CarouselPrevious className="left-4 size-12" />
     </Carousel>
-   {Projects.map((project, index) => (
-        <Card key={index} className="rounded-none py-6 m-0 ">
-
-          <CardContent className="flex w-full h-[400px] items-center justify-center p-6">
-            <span className="text-4xl font-semibold">{project.name}</span>
-          </CardContent>
-        </Card>
-      ))}
 </>
   )
 }
