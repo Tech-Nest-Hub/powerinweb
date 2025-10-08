@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import technest from '@/assets/technest.jpg'
 import ghost from '@/assets/images.jpeg'
 import alan from '@/assets/alan.jpg'
+import punjan  from '@/assets/punjan.jpg'
 
 const About = () => {
   return (
@@ -76,13 +77,13 @@ const About = () => {
               {/* punjan */}
       <div className="flex flex-wrap justify-center py-10 border-b-2 border-gray-700">
         <div className="px-4 py-1/2">
-          <Link to="https://github.com/Ghost9841" className="m-4 p-2"><Github className='text-black dark:text-white' size={40} /></Link>
-          <Link to="https://www.linkedin.com" className="m-4 p-2"><Linkedin color="#00b3ff" size={40} /></Link>
-          <Link to="https://www.instagram.com" className="m-4 p-2"><Instagram size={40} color="#e22222" /></Link>
+          <Link to="https://github.com/AOISYNM" className="m-4 p-2"><Github className='text-black dark:text-white' size={40} /></Link>
+          <Link to="https://www.linkedin.com/in/punjan-pandey-90347b389/" className="m-4 p-2"><Linkedin color="#00b3ff" size={40} /></Link>
+          <Link to="https://www.instagram.com/punjan___pandey/" className="m-4 p-2"><Instagram size={40} color="#e22222" /></Link>
         </div>
 
 
-        <img src="" alt="punjan " className="rounded-full h-[250px] mx-10 "/>
+        <img src= {punjan} alt="punjan " className="rounded-full h-[250px] mx-10 "/>
 
         <div className="w-[400px]">
           <h1 className="text-4xl mb-5 text-bold">Punjan Pandey</h1>
